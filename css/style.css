@@ -178,3 +178,15 @@ code {
     font-size: 20px;
   }
 }
+
+/* =========================
+   DOC IMAGE
+========================= */
+.doc-image {
+  display: block;
+  width: 100%;
+  max-width: 800px;     /* จำกัดไม่ให้ใหญ่เกินบนคอม */
+  height: auto;         /* รักษาสัดส่วนภาพ */
+  margin: 24px auto;    /* กึ่งกลาง + ระยะห่าง */
+  border-radius: 8px;
+}
