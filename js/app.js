@@ -1,7 +1,15 @@
+// ===== Query elements =====
 const nav = document.getElementById("nav");
 const page = document.getElementById("page");
+const sidebar = document.getElementById("sidebar");
+const menuBtn = document.getElementById("menuBtn");
 
-/* โหลดโครงสร้าง Docs */
+// ===== Toggle sidebar (mobile) =====
+menuBtn?.addEventListener("click", () => {
+  sidebar.classList.toggle("open");
+});
+
+// ===== Load docs structure =====
 fetch("data/docs.json")
   .then(res => res.json())
   .then(docs => {
@@ -15,32 +23,23 @@ fetch("data/docs.json")
       docs[category].forEach(item => {
         const link = document.createElement("a");
         link.textContent = item.title;
-        link.onclick = () => loadPage(item.file);
+        link.onclick = () => loadPage(item.file); // 👈 เรียกใช้ตรงนี้
         nav.appendChild(link);
 
         if (!firstPage) firstPage = item.file;
       });
     }
 
-    // โหลดหน้าแรกอัตโนมัติ
     if (firstPage) loadPage(firstPage);
   });
 
-/* โหลดไฟล์เนื้อหา */
+// ===== 🔴 วางไว้ตรงนี้ =====
 function loadPage(file) {
   fetch(`pages/${file}`)
     .then(res => res.text())
     .then(html => {
       page.innerHTML = html;
       window.scrollTo(0, 0);
+      sidebar.classList.remove("open"); // ปิดเมนูมือถือ
     });
 }
-const nav = document.getElementById("nav");
-const page = document.getElementById("page");
-const sidebar = document.getElementById("sidebar");
-const menuBtn = document.getElementById("menuBtn");
-
-/* Toggle sidebar (mobile) */
-menuBtn?.addEventListener("click", () => {
-  sidebar.classList.toggle("open");
-});
