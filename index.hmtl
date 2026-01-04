@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bedrock Add-On Docs (TH)</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <aside class="sidebar">
+    <h2>📘 Bedrock Docs</h2>
+    <nav>
+      <a href="#intro">เริ่มต้น</a>
+      <a href="#bp">Behavior Pack</a>
+      <a href="#rp">Resource Pack</a>
+      <a href="#script">Script API</a>
+    </nav>
+  </aside>
+
+  <main class="content">
+    <section id="intro">
+      <h1>เริ่มต้นกับ Minecraft Bedrock Add-On</h1>
+      <p>
+        เอกสารนี้จัดทำขึ้นเพื่ออธิบายการสร้าง Add-On
+        สำหรับ Minecraft Bedrock Edition เป็นภาษาไทย
+      </p>
+    </section>
+
+    <section id="bp">
+      <h2>Behavior Pack (BP)</h2>
+      <p>
+        Behavior Pack ใช้กำหนดพฤติกรรมของ Entity, Block, Item
+      </p>
+
+      <pre><code>{
+  "format_version": 2,
+  "header": {
+    "name": "My BP",
+    "uuid": "xxxx",
+    "version": [1,0,0]
+  }
+}</code></pre>
+    </section>
+
+    <section id="script">
+      <h2>Script API</h2>
+      <p>
+        Script API ใช้ JavaScript ในการควบคุม Logic ภายในเกม
+      </p>
+    </section>
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
