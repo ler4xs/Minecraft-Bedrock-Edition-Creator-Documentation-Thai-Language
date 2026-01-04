@@ -35,3 +35,12 @@ function loadPage(file) {
       window.scrollTo(0, 0);
     });
 }
+const nav = document.getElementById("nav");
+const page = document.getElementById("page");
+const sidebar = document.getElementById("sidebar");
+const menuBtn = document.getElementById("menuBtn");
+
+/* Toggle sidebar (mobile) */
+menuBtn?.addEventListener("click", () => {
+  sidebar.classList.toggle("open");
+});
