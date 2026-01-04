@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Prompt&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Prompt&display=swap");
 
 * {
   box-sizing: border-box;
@@ -6,45 +6,63 @@
 
 body {
   margin: 0;
-  font-family: 'Prompt', sans-serif;
+  font-family: "Prompt", sans-serif;
   background: #0f172a;
   color: #e5e7eb;
   display: flex;
 }
 
+/* ===== Sidebar ===== */
 .sidebar {
   width: 260px;
   background: #020617;
   padding: 20px;
-  position: fixed;
   height: 100vh;
+  overflow-y: auto;
+  position: fixed;
 }
 
 .sidebar h2 {
   color: #38bdf8;
+  margin-bottom: 16px;
+}
+
+.sidebar h3 {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #94a3b8;
 }
 
 .sidebar a {
   display: block;
+  padding: 6px 0;
   color: #cbd5f5;
   text-decoration: none;
-  margin: 10px 0;
+  font-size: 14px;
+  cursor: pointer;
 }
 
 .sidebar a:hover {
   color: #38bdf8;
 }
 
+/* ===== Content ===== */
 .content {
   margin-left: 260px;
   padding: 40px;
   max-width: 900px;
+  width: 100%;
 }
 
-h1, h2 {
+h1, h2, h3 {
   color: #38bdf8;
 }
 
+p {
+  line-height: 1.8;
+}
+
+/* ===== Code Block ===== */
 pre {
   background: #020617;
   padding: 16px;
@@ -54,4 +72,6 @@ pre {
 
 code {
   color: #a5f3fc;
+  font-family: Consolas, monospace;
+  font-size: 14px;
 }
