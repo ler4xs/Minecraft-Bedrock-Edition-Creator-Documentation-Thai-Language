@@ -203,3 +203,65 @@ code {
     font-size: 12.5px;
   }
 }
+
+
+/* =========================
+   CODE BLOCK (Learn style)
+========================= */
+.code-block {
+  background: #1a1a1a;
+  border: 1px solid #2a2a2a;
+  border-radius: 12px;
+  margin: 24px 0;
+  overflow: hidden;
+}
+
+.code-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 14px;
+  background: #262626;
+  border-bottom: 1px solid #2a2a2a;
+}
+
+.code-lang {
+  font-size: 13px;
+  font-weight: 600;
+  color: #e5e5e5;
+}
+
+.copy-btn {
+  background: transparent;
+  border: 1px solid #3a3a3a;
+  color: #e5e5e5;
+  font-size: 13px;
+  padding: 4px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.copy-btn:hover {
+  background: #333333;
+}
+
+.code-block pre {
+  margin: 0;
+  padding: 16px;
+  background: #111111;
+  overflow-x: auto;
+}
+
+.code-block code {
+  font-family: Consolas, Menlo, monospace;
+  font-size: 14px;
+  color: #e5e5e5;
+  line-height: 1.6;
+}
+
+/* Mobile ปรับนิดหน่อย */
+@media (max-width: 768px) {
+  .code-block code {
+    font-size: 13px;
+  }
+}
