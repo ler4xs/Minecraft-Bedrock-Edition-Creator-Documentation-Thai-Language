@@ -1,0 +1,14 @@
+<h1>Script API – Events</h1>
+
+<p>
+Events ใช้ตรวจจับเหตุการณ์ต่าง ๆ ภายในเกม
+เช่น ผู้เล่นเข้าเกม, ใช้ไอเทม, กระโดด
+</p>
+
+<pre><code>
+import { world } from "@minecraft/server";
+
+world.afterEvents.playerSpawn.subscribe(event => {
+  console.log("ผู้เล่นเข้าเกม");
+});
+</code></pre>
