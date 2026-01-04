@@ -40,7 +40,12 @@ function loadPage(file) {
     .then(html => {
       page.innerHTML = html;
       window.scrollTo(0, 0);
-      sidebar.classList.remove("open"); // ปิดเมนูมือถือ
+      sidebar.classList.remove("open");
+
+      // 🔥 สั่ง Prism highlight ใหม่
+      if (window.Prism) {
+        Prism.highlightAll();
+      }
     });
 }
 
