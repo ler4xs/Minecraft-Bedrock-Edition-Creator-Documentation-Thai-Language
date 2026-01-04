@@ -1,5 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Prompt&display=swap");
 
+/* =========================
+   RESET / BASE
+========================= */
 * {
   box-sizing: border-box;
 }
@@ -12,9 +15,11 @@ body {
   display: flex;
 }
 
-/* ===== Mobile Header ===== */
+/* =========================
+   MOBILE HEADER
+========================= */
 .mobile-header {
-  display: none;
+  display: none; /* desktop ซ่อน */
   position: fixed;
   top: 0;
   width: 100%;
@@ -32,9 +37,17 @@ body {
   color: #38bdf8;
   font-size: 24px;
   margin-right: 12px;
+  cursor: pointer;
 }
 
-/* ===== Sidebar ===== */
+.mobile-header span {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* =========================
+   SIDEBAR
+========================= */
 .sidebar {
   width: 260px;
   background: #020617;
@@ -42,6 +55,8 @@ body {
   height: 100vh;
   overflow-y: auto;
   position: fixed;
+  left: 0;
+  top: 0;
 }
 
 .sidebar h2 {
@@ -68,12 +83,23 @@ body {
   color: #38bdf8;
 }
 
-/* ===== Content ===== */
+/* =========================
+   CONTENT
+========================= */
 .content {
   margin-left: 260px;
   padding: 40px;
   max-width: 900px;
   width: 100%;
+}
+
+h1 {
+  font-size: 28px;
+  margin-top: 0;
+}
+
+h2 {
+  font-size: 22px;
 }
 
 h1, h2, h3 {
@@ -84,7 +110,13 @@ p {
   line-height: 1.8;
 }
 
-/* ===== Code Block ===== */
+ul {
+  padding-left: 20px;
+}
+
+/* =========================
+   CODE BLOCK
+========================= */
 pre {
   background: #020617;
   padding: 16px;
@@ -98,6 +130,9 @@ code {
   font-size: 14px;
 }
 
+/* =========================
+   RESPONSIVE (MOBILE)
+========================= */
 @media (max-width: 768px) {
 
   body {
@@ -109,9 +144,8 @@ code {
   }
 
   .sidebar {
-    position: fixed;
-    left: -260px;
     top: 56px;
+    left: -260px;
     transition: left 0.3s ease;
     z-index: 999;
   }
