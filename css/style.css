@@ -10,8 +10,8 @@
 body {
   margin: 0;
   font-family: "Prompt", sans-serif;
-  background: #0f172a;
-  color: #e5e7eb;
+  background: #1f1f1f;
+  color: #e5e5e5;
   display: flex;
 }
 
@@ -19,13 +19,13 @@ body {
    MOBILE HEADER
 ========================= */
 .mobile-header {
-  display: none; /* desktop ซ่อน */
+  display: none;
   position: fixed;
   top: 0;
   width: 100%;
   height: 56px;
-  background: #020617;
-  color: #e5e7eb;
+  background: #171717;
+  border-bottom: 1px solid #2a2a2a;
   align-items: center;
   padding: 0 16px;
   z-index: 1000;
@@ -34,14 +34,14 @@ body {
 .mobile-header button {
   background: none;
   border: none;
-  color: #38bdf8;
-  font-size: 24px;
+  color: #c084fc;
+  font-size: 22px;
   margin-right: 12px;
   cursor: pointer;
 }
 
 .mobile-header span {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 500;
 }
 
@@ -49,9 +49,10 @@ body {
    SIDEBAR
 ========================= */
 .sidebar {
-  width: 260px;
-  background: #020617;
-  padding: 20px;
+  width: 300px;
+  background: #171717;
+  border-right: 1px solid #2a2a2a;
+  padding: 16px 12px;
   height: 100vh;
   overflow-y: auto;
   position: fixed;
@@ -60,54 +61,62 @@ body {
 }
 
 .sidebar h2 {
-  color: #38bdf8;
-  margin-bottom: 16px;
+  font-size: 16px;
+  color: #e5e5e5;
+  margin: 0 0 12px;
 }
 
+/* หมวดหมู่ */
 .sidebar h3 {
-  margin-top: 20px;
-  font-size: 14px;
-  color: #94a3b8;
+  font-size: 12px;
+  color: #a3a3a3;
+  margin: 18px 0 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
+/* ลิงก์ */
 .sidebar a {
   display: block;
-  padding: 6px 0;
-  color: #cbd5f5;
+  padding: 6px 8px;
+  border-radius: 6px;
+  color: #e5e5e5;
   text-decoration: none;
   font-size: 14px;
   cursor: pointer;
 }
 
 .sidebar a:hover {
-  color: #38bdf8;
+  background: #262626;
 }
 
 /* =========================
    CONTENT
 ========================= */
 .content {
-  margin-left: 260px;
-  padding: 40px;
+  margin-left: 300px;
+  padding: 40px 48px;
   max-width: 900px;
   width: 100%;
 }
 
 h1 {
-  font-size: 28px;
+  font-size: 36px;
   margin-top: 0;
 }
 
 h2 {
-  font-size: 22px;
+  font-size: 24px;
+  margin-top: 32px;
 }
 
 h1, h2, h3 {
-  color: #38bdf8;
+  color: #f5f5f5;
 }
 
 p {
-  line-height: 1.8;
+  line-height: 1.75;
+  color: #d4d4d4;
 }
 
 ul {
@@ -118,14 +127,16 @@ ul {
    CODE BLOCK
 ========================= */
 pre {
-  background: #020617;
+  background: #111111;
+  border: 1px solid #2a2a2a;
   padding: 16px;
   border-radius: 8px;
   overflow-x: auto;
+  margin: 20px 0;
 }
 
 code {
-  color: #a5f3fc;
+  color: #e5e5e5;
   font-family: Consolas, monospace;
   font-size: 14px;
 }
@@ -145,7 +156,7 @@ code {
 
   .sidebar {
     top: 56px;
-    left: -260px;
+    left: -300px;
     transition: left 0.3s ease;
     z-index: 999;
   }
@@ -156,18 +167,14 @@ code {
 
   .content {
     margin-left: 0;
-    padding: 80px 20px 40px;
+    padding: 88px 20px 40px;
   }
 
   h1 {
-    font-size: 22px;
+    font-size: 26px;
   }
 
   h2 {
-    font-size: 18px;
-  }
-
-  pre {
-    font-size: 13px;
+    font-size: 20px;
   }
 }
