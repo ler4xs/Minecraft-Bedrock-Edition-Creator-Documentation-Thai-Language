@@ -97,3 +97,43 @@ code {
   font-family: Consolas, monospace;
   font-size: 14px;
 }
+
+@media (max-width: 768px) {
+
+  body {
+    flex-direction: column;
+  }
+
+  .mobile-header {
+    display: flex;
+  }
+
+  .sidebar {
+    position: fixed;
+    left: -260px;
+    top: 56px;
+    transition: left 0.3s ease;
+    z-index: 999;
+  }
+
+  .sidebar.open {
+    left: 0;
+  }
+
+  .content {
+    margin-left: 0;
+    padding: 80px 20px 40px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  pre {
+    font-size: 13px;
+  }
+}
