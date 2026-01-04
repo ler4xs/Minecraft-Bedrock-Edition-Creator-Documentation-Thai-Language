@@ -43,3 +43,20 @@ function loadPage(file) {
       sidebar.classList.remove("open"); // ปิดเมนูมือถือ
     });
 }
+
+document.addEventListener("click", (e) => {
+  if (!e.target.classList.contains("copy-btn")) return;
+
+  const code = e.target
+    .closest(".code-block")
+    .querySelector("code")
+    .innerText;
+
+  navigator.clipboard.writeText(code);
+
+  const original = e.target.textContent;
+  e.target.textContent = "Copied!";
+  setTimeout(() => {
+    e.target.textContent = original;
+  }, 1200);
+});
