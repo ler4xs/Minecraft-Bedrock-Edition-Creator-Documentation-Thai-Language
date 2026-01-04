@@ -1,0 +1,20 @@
+{
+  "เริ่มต้น": [
+    {
+      "title": "ภาพรวม Add-On",
+      "file": "intro.html"
+    }
+  ],
+  "Behavior Pack": [
+    {
+      "title": "manifest.json",
+      "file": "bp/manifest.html"
+    }
+  ],
+  "Script API": [
+    {
+      "title": "Events",
+      "file": "script/events.html"
+    }
+  ]
+}
